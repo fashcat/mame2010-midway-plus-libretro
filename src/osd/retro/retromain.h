@@ -1,6 +1,6 @@
 /***************************************************************************
 
-retromain.h 
+retromain.h
 
 ****************************************************************************/
 
@@ -88,7 +88,7 @@ struct kt_table
    input_item_id   mame_key;
 };
 
-// fake a keyboard mapped to retro joypad 
+// fake a keyboard mapped to retro joypad
 enum
 {
 	KEY_TAB,
@@ -101,8 +101,8 @@ enum
 	KEY_BUTTON_3,
 	KEY_BUTTON_4,
 	KEY_BUTTON_5,
-	KEY_BUTTON_6, 
-	KEY_BUTTON_7,     
+	KEY_BUTTON_6,
+	KEY_BUTTON_7,
 	KEY_JOYSTICK_U,
 	KEY_JOYSTICK_D,
 	KEY_JOYSTICK_L,
@@ -305,6 +305,7 @@ const kt_table ktable[] = {
          		(core_stricmp(machine->gamedrv->parent, "mk") == 0) || (core_stricmp(machine->gamedrv->name, "mk2") == 0) || \
          		(core_stricmp(machine->gamedrv->parent, "mk2") == 0) || (core_stricmp(machine->gamedrv->name, "mk3") == 0) || \
          		(core_stricmp(machine->gamedrv->name, "umk3") == 0) || (core_stricmp(machine->gamedrv->parent, "umk3") == 0) || \
+            (core_stricmp(machine->gamedrv->name, "umk3p") == 0) || (core_stricmp(machine->gamedrv->parent, "umk3p") == 0) || \
          		(core_stricmp(machine->gamedrv->name, "wwfmania") == 0) || (core_stricmp(machine->gamedrv->parent, "wwfmania") == 0)
 
 /* Capcom Eco Fighter , use L & R button to turn the weapon */

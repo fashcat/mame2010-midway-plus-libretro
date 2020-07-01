@@ -479,6 +479,13 @@ DRIVER_INIT( umk3 )
 	umk3_palette = memory_install_write16_handler(cputag_get_address_space(machine, "maincpu", ADDRESS_SPACE_PROGRAM), 0x0106a060, 0x0106a09f, 0, 0, umk3_palette_hack_w);
 }
 
+DRIVER_INIT( umk3p )
+{
+	init_mk3_common(machine);
+	umk3_palette = memory_install_write16_handler(cputag_get_address_space(machine, "maincpu", ADDRESS_SPACE_PROGRAM), 0x0106a060, 0x0106a09f, 0, 0, umk3_palette_hack_w);
+}
+
+
 DRIVER_INIT( umk3r11 )
 {
 	init_mk3_common(machine);
