@@ -8,7 +8,7 @@
     Games supported:
         * Mortal Kombat (T-unit version)
         * Mortal Kombat 2
-				* Mortal Kombat II +
+	* Mortal Kombat II +
         * NBA Jam
         * NBA Jam Tournament Edition
         * Judge Dredd (prototype)
