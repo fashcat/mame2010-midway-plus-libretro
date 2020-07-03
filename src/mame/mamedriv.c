@@ -7044,6 +7044,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( totcarn )	/* (c) 1992 Midway */
 	DRIVER( totcarnp )	/* (c) 1992 Midway */
 	DRIVER( mk2 )		/* (c) 1993 Midway */
+	DRIVER( mk2p ) /* 2018 Team Plus */
 	DRIVER( mk2r31e )	/* (c) 1993 Midway */
 	DRIVER( mk2r32 )	/* (c) 1993 Midway */
 	DRIVER( mk2r30 )	/* (c) 1993 Midway */
@@ -7065,7 +7066,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( mk3r10 )	/* (c) 1994 Midway */
 	DRIVER( mk3p40 )	/* (c) 1994 Midway */
 	DRIVER( umk3 )		/* (c) 1994 Midway */
-	DRIVER( umk3p )		/* (c) 2019 Team Plus */
+	DRIVER( umk3p )		/* 2019 Team Plus */
 	DRIVER( umk3r11 )	/* (c) 1994 Midway */
 	DRIVER( umk3r10 )	/* (c) 1994 Midway */
 	DRIVER( wwfmania )	/* (c) 1995 Midway */
