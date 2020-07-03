@@ -1280,7 +1280,7 @@ GAME( 1994, mk3p40,   mk3,       wunit, mk3,      mk3r10,   ROT0, "Midway", "Mor
 GAME( 1994, umk3,     0,         wunit, mk3,      umk3,     ROT0, "Midway", "Ultimate Mortal Kombat 3 (rev 1.2)", GAME_SUPPORTS_SAVE )
 GAME( 1994, umk3r11,  umk3,      wunit, mk3,      umk3r11,  ROT0, "Midway", "Ultimate Mortal Kombat 3 (rev 1.1)", GAME_SUPPORTS_SAVE )
 GAME( 1994, umk3r10,  umk3,      wunit, mk3,      umk3r11,  ROT0, "Midway", "Ultimate Mortal Kombat 3 (rev 1.0)", GAME_SUPPORTS_SAVE )
-GAME( 2019, umk3p,    0,		     wunit, mk3,      umk3p,    ROT0, "Team Plus", "Ultimate Mortal Kombat 3 + (beta 1)", GAME_SUPPORTS_SAVE )
+GAME( 2019, umk3p,    0,	 wunit, mk3,      umk3p,    ROT0, "Team Plus", "Ultimate Mortal Kombat 3 + (beta 1)", GAME_SUPPORTS_SAVE )
 
 GAME( 1995, wwfmania, 0,         wunit, wwfmania, wwfmania, ROT0, "Midway", "WWF: Wrestlemania (rev 1.30 08/10/95)", GAME_SUPPORTS_SAVE )
 GAME( 1995, wwfmaniab,wwfmania,  wunit, wwfmania, wwfmania, ROT0, "Midway", "WWF: Wrestlemania (rev 1.20 08/02/95)", GAME_SUPPORTS_SAVE )
