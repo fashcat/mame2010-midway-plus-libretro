@@ -8,7 +8,7 @@
     Games supported:
         * Mortal Kombat 3
         * Ultimate Mortal Kombat 3
-				* Ultimate Mortal Kombat 3 +
+	* Ultimate Mortal Kombat 3 +
         * NBA Hangtime
         * NBA Maximum Hangtime
         * 2 On 2 Open Ice Challenge
