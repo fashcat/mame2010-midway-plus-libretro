@@ -154,7 +154,7 @@ osd_work_queue *osd_work_queue_alloc(int flags)
 	// on an n-CPU system, create (n-1) threads for multi queues, and 1 thread for everything else
 	else
 		queue->threads = (flags & WORK_QUEUE_FLAG_MULTI) ? (numprocs - 1) : 1;
-		
+
 #if defined(WIN32)
 	// multi-queues with high frequency items should top out at 4 for now
 	// since we have scaling problems above that
@@ -261,7 +261,7 @@ int osd_work_queue_wait(osd_work_queue *queue, osd_ticks_t timeout)
 			do {
 				int spin = 10000;
 				while (--spin && queue->items != 0)
-					osd_yield_processor();
+					osd_num_processor();
 			} while (queue->items != 0 && osd_ticks() < stopspin);
 			end_timing(thread->spintime);
 
@@ -496,7 +496,7 @@ int osd_work_item_wait(osd_work_item *item, osd_ticks_t timeout)
 		do {
 			int spin = 10000;
 			while (--spin && !item->done)
-				osd_yield_processor();
+				osd_num_processor();
 		} while (!item->done && osd_ticks() < stopspin);
 	}
 
@@ -647,7 +647,7 @@ static void *worker_thread_entry(void *param)
 				do {
 					int spin = 10000;
 					while (--spin && queue->list == NULL)
-						osd_yield_processor();
+						osd_num_processor();
 				} while (queue->list == NULL && osd_ticks() < stopspin);
 				end_timing(thread->spintime);
 			}
