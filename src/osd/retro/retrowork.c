@@ -261,7 +261,7 @@ int osd_work_queue_wait(osd_work_queue *queue, osd_ticks_t timeout)
 			do {
 				int spin = 10000;
 				while (--spin && queue->items != 0)
-					osd_num_processor();
+					osd_num_processors();
 			} while (queue->items != 0 && osd_ticks() < stopspin);
 			end_timing(thread->spintime);
 
@@ -496,7 +496,7 @@ int osd_work_item_wait(osd_work_item *item, osd_ticks_t timeout)
 		do {
 			int spin = 10000;
 			while (--spin && !item->done)
-				osd_num_processor();
+				osd_num_processors();
 		} while (!item->done && osd_ticks() < stopspin);
 	}
 
@@ -647,7 +647,7 @@ static void *worker_thread_entry(void *param)
 				do {
 					int spin = 10000;
 					while (--spin && queue->list == NULL)
-						osd_num_processor();
+						osd_num_processors();
 				} while (queue->list == NULL && osd_ticks() < stopspin);
 				end_timing(thread->spintime);
 			}
