@@ -348,6 +348,27 @@ else ifeq ($(platform), wiiu)
    NATIVECFLAGS = -std=gnu99
    CCOMFLAGS += $(PLATCFLAGS) -Iwiiu-deps
 
+# Nintendo Switch (libnx)
+else ifeq ($(platform), libnx)
+	include $(DEVKITPRO)/libnx/switch_rules
+	EXT=a
+	TARGET := $(TARGET_NAME)_libretro_$(platform).$(EXT)
+	DEFINES := -DSWITCH=1 -U__linux__ -U__linux -DRARCH_INTERNAL -DHAVE_LIBNX
+	CFLAGS := $(DEFINES) -g -O3 -ffast-math -fPIE -I$(LIBNX)/include/ -ffunction-sections -fdata-sections -fcommon -ftls-model=local-exec -Wl,--allow-multiple-definition -specs=$(LIBNX)/switch.specs
+	CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
+	CFLAGS += -std=gnu11
+	PLATCFLAGS += -D__SWITCH__ -march=armv8-a -mtune=cortex-a57 -mtp=soft -fPIE
+	CPU_ARCH := arm64
+	STATIC_LINKING = 1
+
+# Nintendo Switch (libtransistor)
+else ifeq ($(platform), switch)
+	EXT=a
+	TARGET := $(TARGET_NAME)_libretro_$(platform).$(EXT)
+	PLATCFLAGS += -D__SWITCH__
+	include $(LIBTRANSISTOR_HOME)/libtransistor.mk
+	STATIC_LINKING=1
+
 # (armv7 a7, hard point, neon based) ### 
 # NESC, SNESC, C64 mini 
 else ifeq ($(platform), classic_armv7_a7)
